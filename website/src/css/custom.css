@@ -1,0 +1,377 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================
+   Chengeta AI — Docusaurus + Tailwind dark theme
+   Brand: Forest Green / Emerald (#3DBF86) + Gold (#C9A227)
+   ===================================================== */
+
+:root,
+[data-theme='dark'] {
+  /* Docusaurus primary color vars (emerald from logo) */
+  --ifm-color-primary: #3DBF86;
+  --ifm-color-primary-dark: #169C68;
+  --ifm-color-primary-darker: #0F5B3A;
+  --ifm-color-primary-darkest: #0C4A2F;
+  --ifm-color-primary-light: #54CE98;
+  --ifm-color-primary-lighter: #7ADBB0;
+  --ifm-color-primary-lightest: #A9E7CC;
+
+  /* Surfaces */
+  --ifm-background-color: #0B140F;
+  --ifm-background-surface-color: #10211A;
+  --ifm-card-background-color: #10211A;
+  --ifm-toc-border-color: #1C3B2C;
+
+  /* Navbar */
+  --ifm-navbar-background-color: rgba(11, 20, 15, 0.88);
+  --ifm-navbar-shadow: 0 1px 0 0 #1C3B2C;
+  --ifm-navbar-height: 60px;
+
+  /* Footer */
+  --ifm-footer-background-color: #070F0A;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --ifm-font-color-base: #EAF2EC;
+  --ifm-font-color-secondary: #9DB3A6;
+  --ifm-heading-color: #F3F8F4;
+  --ifm-heading-font-weight: 700;
+  --ifm-link-color: #3DBF86;
+  --ifm-link-hover-color: #5FD3A0;
+
+  /* Code */
+  --ifm-code-background: #14271D;
+  --ifm-code-border-radius: 6px;
+  --ifm-pre-background: #0A140E;
+  --ifm-pre-border-radius: 12px;
+  --ifm-pre-padding: 1.25rem;
+  --ifm-code-font-size: 0.83em;
+
+  /* Borders */
+  --ifm-color-emphasis-300: #1C3B2C;
+  --ifm-border-color: #1C3B2C;
+
+  /* Sidebar */
+  --ifm-sidebar-width: 280px;
+
+  /* Admonitions */
+  --ifm-color-info-dark: #3DBF86;
+  --ifm-color-tip-dark: #10b981;
+  --ifm-color-warning-dark: #C9A227;
+  --ifm-color-danger-dark: #ef4444;
+
+  /* Table */
+  --ifm-table-head-background: #10211A;
+  --ifm-table-stripe-background: rgba(61, 191, 134, 0.03);
+}
+
+/* ── Global body ── */
+body {
+  background: #0B140F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Navbar ── */
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1C3B2C;
+}
+
+.navbar__logo {
+  border-radius: 8px;
+}
+
+.navbar__title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #3DBF86, #C9A227);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.88rem;
+  opacity: 0.8;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  opacity: 1;
+  color: #3DBF86 !important;
+}
+
+/* GitHub icon in navbar */
+.header-github-link::before {
+  content: '';
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23e2e8f0' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.header-github-link:hover::before { opacity: 1; }
+
+/* ── Sidebar ── */
+.theme-doc-sidebar-container {
+  border-right: 1px solid #1C3B2C !important;
+}
+
+.menu__link {
+  font-size: 0.85rem;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  color: #9DB3A6;
+}
+
+.menu__link:hover {
+  color: #3DBF86 !important;
+  background: rgba(61, 191, 134, 0.07) !important;
+}
+
+.menu__link--active {
+  color: #3DBF86 !important;
+  font-weight: 600;
+  background: rgba(61, 191, 134, 0.1) !important;
+}
+
+.menu__caret::before {
+  border-color: #9DB3A6;
+}
+
+/* ── Code blocks ── */
+.prism-code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+  font-size: 0.83em !important;
+  line-height: 1.75 !important;
+}
+
+div[class^='codeBlockContainer'] {
+  border: 1px solid #1C3B2C;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+div[class^='codeBlockTitle'] {
+  background: #0E1C15;
+  border-bottom: 1px solid #1C3B2C;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #3DBF86;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+.theme-code-block {
+  --prism-background-color: #0A140E;
+}
+
+/* ── Inline code ── */
+code:not([class]) {
+  background: #14271D !important;
+  border: 1px solid #1C3B2C !important;
+  color: #3DBF86 !important;
+  border-radius: 5px !important;
+  padding: 0.1em 0.4em !important;
+  font-size: 0.85em !important;
+}
+
+/* ── Admonitions ── */
+.alert {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: rgba(11, 20, 15, 0.7) !important;
+}
+
+.alert--tip {
+  border-left: 4px solid #10b981 !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+}
+
+.alert--info {
+  border-left: 4px solid #3DBF86 !important;
+  border-color: rgba(61, 191, 134, 0.2) !important;
+}
+
+.alert--note {
+  border-left: 4px solid #C9A227 !important;
+  border-color: rgba(201, 162, 39, 0.2) !important;
+}
+
+.alert--warning {
+  border-left: 4px solid #C9A227 !important;
+  border-color: rgba(201, 162, 39, 0.2) !important;
+}
+
+.alert--danger {
+  border-left: 4px solid #ef4444 !important;
+  border-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Tables ── */
+table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1C3B2C !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+th {
+  background: #10211A !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9DB3A6 !important;
+  border-bottom: 2px solid #1C3B2C !important;
+}
+
+td {
+  font-size: 0.88rem;
+  border-color: #14271D !important;
+}
+
+tr:hover td {
+  background: rgba(61, 191, 134, 0.04);
+}
+
+/* ── Tabs ── */
+.tabs__item {
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px 8px 0 0;
+  color: #9DB3A6;
+  transition: all 0.2s ease;
+}
+
+.tabs__item:hover {
+  color: #3DBF86;
+  background: rgba(61, 191, 134, 0.06);
+}
+
+.tabs__item--active {
+  color: #3DBF86 !important;
+  border-bottom-color: #3DBF86 !important;
+  font-weight: 600;
+}
+
+/* ── TOC ── */
+.table-of-contents__link {
+  font-size: 0.8rem;
+  color: #6E867A;
+  transition: color 0.15s;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #3DBF86;
+  font-weight: 600;
+}
+
+/* ── Pagination ── */
+.pagination-nav__link {
+  border: 1px solid #1C3B2C;
+  border-radius: 10px;
+  background: #10211A;
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: #3DBF86;
+  box-shadow: 0 0 20px rgba(61, 191, 134, 0.15);
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid #1C3B2C;
+}
+
+.footer__title {
+  font-weight: 700;
+  color: #F3F8F4;
+  font-size: 0.9rem;
+}
+
+.footer__link-item {
+  font-size: 0.85rem;
+  color: #6E867A !important;
+  transition: color 0.15s;
+}
+
+.footer__link-item:hover {
+  color: #3DBF86 !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0B140F; }
+::-webkit-scrollbar-thumb { background: #1C3B2C; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2A5340; }
+
+/* ── Breadcrumb ── */
+.breadcrumbs__link {
+  font-size: 0.82rem;
+  color: #6E867A;
+}
+
+.breadcrumbs__link:hover {
+  color: #3DBF86;
+}
+
+/* ── Search ── */
+.navbar__search-input {
+  background: #10211A;
+  border: 1px solid #1C3B2C;
+  border-radius: 8px;
+  color: #EAF2EC;
+  transition: all 0.2s;
+}
+
+.navbar__search-input:focus {
+  border-color: #3DBF86;
+  box-shadow: 0 0 0 3px rgba(61, 191, 134, 0.1);
+}
+
+/* ── Mermaid ── */
+.docusaurus-mermaid-container {
+  background: #0E1C15;
+  border: 1px solid #1C3B2C;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* ── Doc content ── */
+article h1 { letter-spacing: -0.02em; }
+article h2 { letter-spacing: -0.01em; margin-top: 2rem; }
+article h2::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, #1C3B2C, transparent);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Heading anchor ── */
+.hash-link { color: #1C3B2C; transition: color 0.2s; }
+.hash-link:hover { color: #3DBF86; }

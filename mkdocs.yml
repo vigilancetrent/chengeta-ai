@@ -1,0 +1,166 @@
+site_name: Chengeta AI
+site_url: https://vigilancetrent.github.io/chengeta-ai
+site_description: Persistent memory and caching infrastructure for AI agents, workflows, and autonomous systems
+site_author: Chengeta AI
+repo_name: vigilancetrent/chengeta-ai
+repo_url: https://github.com/vigilancetrent/chengeta-ai
+
+theme:
+  name: material
+  logo: assets/chengeta_logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - header.autohide
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      tip: material/lightbulb-outline
+      note: material/note-outline
+      warning: material/alert-outline
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vigilancetrent/chengeta-ai
+      name: GitHub
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/chengeta-ai/
+      name: PyPI
+  generator: false
+
+copyright: "&copy; 2026 Chengeta AI — Persistent Memory for Intelligent Agents"
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.keys
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - Core:
+    - Overview: core/index.md
+    - CacheManager: core/cache-manager.md
+    - CacheKeyBuilder: core/key-builder.md
+    - Policies: core/policies.md
+    - InvalidationEngine: core/invalidation.md
+    - Settings: core/settings.md
+  - Backends:
+    - Overview: backends/index.md
+    - InMemoryBackend: backends/memory.md
+    - AsyncInMemoryBackend: backends/async-memory.md
+    - DiskBackend: backends/disk.md
+    - RedisBackend: backends/redis.md
+    - TieredBackend: backends/tiered.md
+    - FAISSBackend: backends/faiss.md
+    - ChromaBackend: backends/chroma.md
+    - QdrantBackend: backends/qdrant.md
+    - WeaviateBackend: backends/weaviate.md
+    - PineconeBackend: backends/pinecone.md
+  - Cache Layers:
+    - Overview: layers/index.md
+    - ResponseCache: layers/response.md
+    - EmbeddingCache: layers/embedding.md
+    - RetrievalCache: layers/retrieval.md
+    - ContextCache: layers/context.md
+    - SemanticCache: layers/semantic.md
+    - AdaptiveSemanticCache: layers/adaptive-semantic.md
+    - StreamingResponseCache: layers/streaming-response.md
+    - PromptCacheLayer: layers/prompt-cache.md
+  - Middleware:
+    - Overview: middleware/index.md
+    - LLMMiddleware: middleware/llm.md
+    - EmbeddingMiddleware: middleware/embedding.md
+    - RetrieverMiddleware: middleware/retriever.md
+  - Adapters:
+    - Overview: adapters/index.md
+    - OpenAI: adapters/openai.md
+    - Anthropic: adapters/anthropic.md
+    - Mistral: adapters/mistral.md
+    - Gemini: adapters/gemini.md
+    - LangChain: adapters/langchain.md
+    - LangGraph: adapters/langgraph.md
+    - AutoGen: adapters/autogen.md
+    - CrewAI: adapters/crewai.md
+    - Agno: adapters/agno.md
+    - A2A: adapters/a2a.md
+    - LlamaIndex: adapters/llamaindex.md
+    - Google ADK: adapters/google-adk.md
+    - OpenAI Agents: adapters/openai-agents.md
+    - Claude Agent SDK: adapters/claude-agent.md
+  - Cookbook:
+    - Overview: cookbook/index.md
+    - Core Recipes: cookbook/core.md
+    - LangChain: cookbook/langchain.md
+    - LangGraph: cookbook/langgraph.md
+    - AutoGen: cookbook/autogen.md
+    - CrewAI: cookbook/crewai.md
+    - Agno: cookbook/agno.md
+    - A2A: cookbook/a2a.md
+    - Semantic Cache: cookbook/semantic-cache.md
+    - Redis Backend: cookbook/redis.md
+    - Tag Invalidation: cookbook/invalidation.md
+    - TTL Policies: cookbook/ttl.md
+    - Multi-Framework: cookbook/multi-framework.md
+    - Runnable Examples: cookbook/runnable-examples.md
+  - Migration:
+    - From GPTCache: migration-from-gptcache.md
+  - API Reference:
+    - api-reference/index.md

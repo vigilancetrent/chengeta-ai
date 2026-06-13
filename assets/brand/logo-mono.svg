@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" role="img" aria-label="Chengeta AI">
+  <title>Chengeta AI</title>
+  <!-- single-colour lockup; inherits colour via currentColor -->
+  <g transform="translate(6 4) scale(0.875)" fill="currentColor" stroke="currentColor">
+    <path d="M32 32 C25 20 12 20 12 32 C12 44 25 44 32 32" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M32 32 C39 20 52 20 52 32 C52 44 39 44 32 32" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="27" y="27" width="10" height="10" rx="2" transform="rotate(45 32 32)" stroke="none"/>
+  </g>
+  <text x="76" y="46" fill="currentColor" stroke="none"
+        font-family="'Plus Jakarta Sans','Inter','Segoe UI',-apple-system,system-ui,sans-serif"
+        font-size="30" font-weight="800" letter-spacing="-0.5">Chengeta<tspan dx="8" font-weight="600">AI</tspan></text>
+</svg>

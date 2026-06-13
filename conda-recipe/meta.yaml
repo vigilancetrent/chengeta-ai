@@ -1,0 +1,48 @@
+{% set name = "chengeta-ai" %}
+{% set version = "0.3.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/c/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  # sha256: UPDATE_AFTER_FIRST_PYPI_RELEASE
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.12
+    - pip
+    - hatchling
+  run:
+    - python >=3.12
+    - diskcache >=5.6
+    - numpy >=1.26
+
+test:
+  imports:
+    - chengeta_ai
+  commands:
+    - python -c "from chengeta_ai import CacheManager; print('OK')"
+
+about:
+  home: https://github.com/vigilancetrent/chengeta-ai
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Persistent memory and caching infrastructure for AI agents, workflows, and autonomous systems
+  description: |
+    Chengeta AI is a persistent memory and caching layer for AI agents and
+    agentic workflows. It supports LangChain, LangGraph, AutoGen, CrewAI, Agno,
+    A2A, OpenAI, Anthropic, Gemini, and LlamaIndex with 8 memory layers, 9
+    storage backends, semantic recall, and tag-based invalidation.
+  dev_url: https://github.com/vigilancetrent/chengeta-ai
+
+extra:
+  recipe-maintainers:
+    - vigilancetrent

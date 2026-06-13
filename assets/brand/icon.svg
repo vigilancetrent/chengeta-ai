@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Chengeta AI">
+  <title>Chengeta AI</title>
+  <desc>A memory-vault infinity mark — two interlocking loops with a gold vault core, symbolising persistent, continuous memory.</desc>
+  <!-- left loop: deep emerald -->
+  <path d="M32 32 C25 20 12 20 12 32 C12 44 25 44 32 32"
+        fill="none" stroke="#1B7F5A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- right loop: forest green -->
+  <path d="M32 32 C39 20 52 20 52 32 C52 44 39 44 32 32"
+        fill="none" stroke="#0F5B3A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- gold vault core at the crossing -->
+  <rect x="26" y="26" width="12" height="12" rx="2.5" transform="rotate(45 32 32)" fill="#C9A227"/>
+  <!-- keyhole -->
+  <circle cx="32" cy="32" r="2.2" fill="#111111"/>
+</svg>
