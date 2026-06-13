@@ -111,7 +111,9 @@ def test_main_dispatch(
     cli.main()  # should not raise
 
 
-def test_main_version_flag(monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]) -> None:
+def test_main_version_flag(
+    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
     monkeypatch.setattr("sys.argv", ["chengeta", "--version"])
     cli.main()
     assert "Chengeta AI" in capsys.readouterr().out
