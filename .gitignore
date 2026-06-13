@@ -47,5 +47,5 @@ chengeta_data/
 site/
 
 # Local editor/agent settings
-.claude/settings.local.json
+.claude/
 grep.exe.stackdump
