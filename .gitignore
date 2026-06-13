@@ -49,3 +49,5 @@ site/
 # Local editor/agent settings
 .claude/
 grep.exe.stackdump
+.cursor/
+.codegraph/
